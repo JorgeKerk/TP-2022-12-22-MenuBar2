@@ -29,8 +29,6 @@ Ademas de poder descargar este repositorio y modificar el codigo para obtener el
     <li><strong>--timeTransition:</strong> Tiempo de transición de todos los efectos.</li>
 </ul>
 
-<br>
-
 <h2>Link</h2> 
 
 Acceso directo a la página web del repositorio: <a href="https://jorgekerk.github.io/TP-2022-12-22-MenuBar2/">**Barra de Menú II**</a>
