@@ -38,6 +38,9 @@ body, #divIdMenuBarContainer{
 
 /* Crea los limites de la barra de menú y hace que su único elemento (nav) se centre */
 #divIdMenuBarI{
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
     height: 5.5em;
     width: 81%;
     display: flex;
@@ -48,7 +51,7 @@ body, #divIdMenuBarContainer{
 
 /* delimita el ancho del logo para que no desborde de la barra de menú */
 #imgIdLogo{
-    /* background-color: brown; */
+    z-index: 1;
     width: 90px;
 }
 
@@ -69,13 +72,12 @@ nav {
 }
 
 nav div {
-    /* border: 1px solid black; */
     display: flex;
 }
 
 /* Dá formato a todas las estiquetas 'a' dentro del nav */
 nav a {
-    /* border: 1px solid black; */
+    z-index: 1;
     width: 16%;
     text-decoration: none;
     color: var(--colorFont);
@@ -84,12 +86,17 @@ nav a {
     transition: var(--timeTransition) ease-in;
 }
 
+nav a:hover {
+    color: yellow;
+}
+
 #aIdSignIn {
     margin-right: 10px;
     width: 37%;
 }
 
 #aIdButton {
+    z-index: 1;
     margin-right: 0px;
     display: flex;
     align-items: center;
@@ -100,4 +107,56 @@ nav a {
     font-weight: 300;
     background-color: rgb(92,96,243);
     height: 49%;
+}
+
+#divIdCover {
+    z-index: 0;
+    position: absolute;
+    border: none;
+    top: 100%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in;
+}
+
+#divIdMenuBarI:hover #divIdCover {
+    animation: subirCover 0.4s ease-in;
+    top: 0%;
+}
+
+/* Animación que sube el el cover de la barra de emnú */
+@keyframes subirCover {
+    0%{
+        top: 100%;
+        border-top: 2px solid orange;
+    }
+    100%{
+        top: 0%;
+        border-top: 2px solid orange;
+    }
+}
+
+#divIdMenuBarI div a{
+    transition: 0.3s ease-in;
+}
+
+#divIdMenuBarI:hover div a{
+    color: white;
+}
+
+#divIdMenuBarI:hover #aIdButton {
+    background-color: orange;
+}
+
+#divIdMenuBarI div a:hover {
+    color:orange;
+    text-shadow: 0px 0px 25px orange;
+}
+
+#divIdMenuBarI:hover #aIdButton:hover {
+    background-color: white;
+    color: orange;
+    text-shadow: 1px 1px 20px orange;
 }
