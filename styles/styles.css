@@ -1,0 +1,103 @@
+/* Fuente de la barra de menú */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Variables CSS */
+:root{
+    /* Personalizan la barra de menú */
+    --colorFont: black;
+    --colorMain: rgb(124, 103, 202);
+    --colorSecond: white;
+    --colorBkg: rgb(245, 249, 252);
+}
+
+/* Configuraciones iniciales */
+*{
+    color: var(--colorFont);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+/* CXonfiguracion del contenedor de la barra de menú */
+#divIdMenuBarContainer{
+    margin-top: 2.5vh;
+    background-color: var(--colorBkg);
+    height: 95vh;
+    width: 95%;
+    border-radius: 6px;
+}
+
+/* Se aplica flexbox para centrar tanto el contenido del body como el contenedor de la barra de menú */
+body, #divIdMenuBarContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Crea los limites de la barra de menú y hace que su único elemento (nav) se centre */
+#divIdMenuBarI{
+    height: 5.5em;
+    width: 81%;
+    display: flex;
+    align-items: center;
+    background-color: var(--colorSecond);
+    justify-content: center;
+}
+
+/* delimita el ancho del logo para que no desborde de la barra de menú */
+#imgIdLogo{
+    /* background-color: brown; */
+    width: 90px;
+}
+
+/* Crea los limites del nav contenedor de los elementos de la barra de menú y hace que el espaciado entre ellos sean iguales */
+nav {
+    width: 83%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#divIdConect {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav div {
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+/* Dá formato a todas las estiquetas 'a' dentro del nav */
+nav a {
+    /* border: 1px solid black; */
+    width: 16%;
+    text-decoration: none;
+    color: var(--colorFont);
+    font-weight: 600;
+    margin-right: 35px;
+    transition: var(--timeTransition) ease-in;
+}
+
+#aIdSignIn {
+    margin-right: 10px;
+    width: 37%;
+}
+
+#aIdButton {
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 300;
+    background-color: rgb(92,96,243);
+    height: 49%;
+}
