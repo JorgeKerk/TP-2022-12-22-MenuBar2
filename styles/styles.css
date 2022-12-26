@@ -5,9 +5,13 @@
 :root{
     /* Personalizan la barra de menú */
     --colorFont: black;
-    --colorMain: rgb(124, 103, 202);
-    --colorSecond: white;
+    --colorFontSecond: white;
+    --colorMain: rgb(92,96,243);
+    --colorSecond: orange;
+    --colorBkgBar: white;
+    --colorBkgCover: rgba(0, 0, 0, 0.4);
     --colorBkg: rgb(245, 249, 252);
+    --timeTransition: 0.3s
 }
 
 /* Configuraciones iniciales */
@@ -37,7 +41,7 @@ body, #divIdMenuBarContainer{
 }
 
 /* Crea los limites de la barra de menú y hace que su único elemento (nav) se centre */
-#divIdMenuBarI{
+#divIdMenuBarII{
     position: relative;
     overflow: hidden;
     flex-direction: column;
@@ -45,7 +49,7 @@ body, #divIdMenuBarContainer{
     width: 81%;
     display: flex;
     align-items: center;
-    background-color: var(--colorSecond);
+    background-color: var(--colorBkgBar);
     justify-content: center;
 }
 
@@ -64,13 +68,14 @@ nav {
     justify-content: space-between;
 }
 
-
+/* Configura los elementos para iniciar sesión */
 #divIdConect {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
+/* Hace que los DIVs del nav sean flex */
 nav div {
     display: flex;
 }
@@ -86,15 +91,13 @@ nav a {
     transition: var(--timeTransition) ease-in;
 }
 
-nav a:hover {
-    color: yellow;
-}
-
+/* Configura la opción re registrarse por primera vez*/
 #aIdSignIn {
     margin-right: 10px;
     width: 37%;
 }
 
+/* Configura el botón de registrarse si ya ha sido registrado anteriormente */
 #aIdButton {
     z-index: 1;
     margin-right: 0px;
@@ -105,10 +108,11 @@ nav a:hover {
     border-radius: 5px;
     color: white;
     font-weight: 300;
-    background-color: rgb(92,96,243);
+    background-color: var(--colorMain);
     height: 49%;
 }
 
+/* Configure el covertor de la barra de menú */
 #divIdCover {
     z-index: 0;
     position: absolute;
@@ -117,12 +121,13 @@ nav a:hover {
     left: 0%;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: 0.3s ease-in;
+    background-color: var(--colorBkgCover);
+    transition: var(--timeTransition) ease-in;
 }
 
-#divIdMenuBarI:hover #divIdCover {
-    animation: subirCover 0.4s ease-in;
+/* Setea la animación del cover cuando el mouse se posiciona sobre la barra de menú */
+#divIdMenuBarII:hover #divIdCover {
+    animation: subirCover var(--timeTransition) ease-in;
     top: 0%;
 }
 
@@ -130,33 +135,52 @@ nav a:hover {
 @keyframes subirCover {
     0%{
         top: 100%;
-        border-top: 2px solid orange;
+        border-top: 2px solid var(--colorSecond);
     }
     100%{
         top: 0%;
-        border-top: 2px solid orange;
+        border-top: 2px solid var(--colorSecond);
     }
 }
 
-#divIdMenuBarI div a{
-    transition: 0.3s ease-in;
+/* Setea la transsion de los elementos 'a' dentro de a barra de menú */
+#divIdMenuBarII div a{
+    transition: var(--timeTransition) ease-in;
 }
 
-#divIdMenuBarI:hover div a{
-    color: white;
+/* Setea el color de los elementos 'a' al pasar el mouse por encima de la barra de menú */
+#divIdMenuBarII:hover div a{
+    color: var(--colorFontSecond);
 }
 
-#divIdMenuBarI:hover #aIdButton {
-    background-color: orange;
+/* Setea el color de fondo del botón cuando el mouse se posiciona por encima de la barra de menú */
+#divIdMenuBarII:hover #aIdButton {
+    background-color: var(--colorSecond);
 }
 
-#divIdMenuBarI div a:hover {
-    color:orange;
-    text-shadow: 0px 0px 25px orange;
+/* Setea el color y el sombreado de los elementoa 'a' de la barra de menú, cuando el mouse se posiciona sobre ellos */
+#divIdMenuBarII div a:hover {
+    color:var(--colorSecond);
+    text-shadow: 0px 0px 25px var(--colorSecond);
 }
 
-#divIdMenuBarI:hover #aIdButton:hover {
-    background-color: white;
-    color: orange;
-    text-shadow: 1px 1px 20px orange;
+/* Configura el color de fondo, el texto y su sombra cuando el mouse pasa por encima de la barra de menú y del botón */
+#divIdMenuBarII:hover #aIdButton:hover {
+    background-color: var(--colorFontSecond);
+    color: var(--colorSecond);
+    text-shadow: 1px 1px 20px var(--colorSecond);
+}
+
+/* Configura el Logo de la barra de menú */
+nav h1 {
+    font-weight: 600;
+    font-size: 20px;
+    font-style:italic;
+    color: var(--colorMain);
+    transition: var(--timeTransition) ease-in;
+}
+
+/* Cambia el color del Logo cuando el mouse se posiciona por encima de la barra de menú */
+#divIdMenuBarII:hover nav h1 {
+    color: var(--colorSecond);
 }

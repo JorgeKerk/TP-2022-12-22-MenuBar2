@@ -4,7 +4,13 @@
 
 Esta es una barra de menú solo con **HTML** y estilos **CSS**. 
 Se aplicó estilos y animación solo por CSS, logrando el siguente resultado:
-![Alt text](images/MenuBarExample.png)
+![Alt text](images/MenuBarExample1.png)
+
+Y con los efectos **CSS**, al posicionar el mouse por encima de la barra, la barra cambiará al siguiente resultado:
+![Alt text](images/MenuBarExample2.png)
+
+La idea es lograr el fecto inverso a la barra de menú mostrada inicialmente.
+
 <br>
 
 **Puede personalizar la barra de menú a su gusto**
@@ -14,18 +20,20 @@ Ademas de poder descargar este repositorio y modificar el codigo para obtener el
 <i>Variables que puede cambiar en el CSS para dar estilo a su barra de menú</i>
 <ul>
     <li><strong>--colorFont:</strong> Color de todas las fuentes de la barra de menú.</li>
-    <li><strong>--colorMain:</strong> Color de los efectos en la barra de menú..</li>
-    <li><strong>--colorSecond:</strong> Color de fondo de la barra de menú.</li>
-    <li><strong>--colorCircle:</strong> Color de el círculo en el ícono de alarma ('campanita') en la barra de menú.</li>
-    <li><strong>--colorPHoldSearch:</strong> Color en el texto de la caja de texto 'Search' mientras que nos se escriba sobre ella, y del ícono de la lupa.</li>
-    <li><strong>--imgUsr:</strong> Imagen del usuario que está logueado.</li>
+    <li><strong>--colorFontSecond:</strong> Color de todas las fuentes de la barra de menú y del fondo del botón al posicionar el mouse por encima de la barra de menú.</li>
+    <li><strong>--colorMain:</strong> Color del logo y del botón en la barra de menú cuando el mouse está fuera de ella.</li>
+    <li><strong>--colorSecond:</strong> Color del logo y del botón en la barra de menú cuando el mouse está por encima de ella.</li>
+    <li><strong>--colorBkgBar:</strong> Color del fondo de la barra de menú.</li>
+    <li><strong>--colorBkgCover:</strong> Color del covertos que cubre a la barra de menú cuando el mouse está por encima de ella.</li>
+    <li><strong>--colorBkg:</strong> Color del fondo que contiene a la barra de manú.</li>
+    <li><strong>--timeTransition:</strong> Tiempo de transición de todos los efectos.</li>
 </ul>
 
-El resto de las variables se recomienda no actualizarlas para no estropear el diseño de la barra de menú.
+<br>
 
 <h2>Link</h2> 
 
-Acceso directo a la página web del repositorio: <a class="aClassMovLeft expand" href="https://jorgekerk.github.io/TP-2022-12-22-MenuBar1/">**Barra de Menú II**</a>
+Acceso directo a la página web del repositorio: <a href="https://jorgekerk.github.io/TP-2022-12-22-MenuBar2/">**Barra de Menú II**</a>
 
 <hr>
 
